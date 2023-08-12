@@ -27,6 +27,7 @@ public class D_Reducer {
 			       return a + b;
 			    });
 		System.out.println(reducedParallel);
+		
 //		   1. The accumulator function (c, d) -> c + d is applied to the substreams simultaneously:
 //			Substream 1: Accumulator: c = 10, d = 1 → c + d = 11
 //			Substream 2: Accumulator: c = 10, d = 2 → c + d = 12

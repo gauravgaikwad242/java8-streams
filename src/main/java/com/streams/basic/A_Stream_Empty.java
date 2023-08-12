@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class A_Stream_Empty {
-
+//********************************************************************************************** */
+//*********************** ALWAYS CLOSE A STREAM TO AVOID MEMORY LEAKS  **************************** */
+//************************************************************************************************* */
 	public static void main(String[] args) {
 		
 		//to create empty stream
