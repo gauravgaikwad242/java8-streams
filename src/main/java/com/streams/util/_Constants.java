@@ -25,4 +25,21 @@ public class _Constants {
             new Product(9, "potatoes"), new Product(13, "potatoes"),
             new Product(9, "potatoes"), new Product(13, "potatoes")
            );
+
+     public static final List<List<Product>> listoflistofproduct = Arrays.asList(
+         Arrays.asList(new Product(23, "potatoes"),
+            new Product(63, "sugar"), new Product(13, "sugar"),
+            new Product(9, "orange"), new Product(13, "bread")),
+            Arrays.asList(new Product(23, "potatoes"),
+            new Product(63, "sugar"), new Product(13, "sugar"),
+            new Product(9, "orange"), new Product(13, "bread")),
+            Arrays.asList(new Product(23, "potatoes"),
+            new Product(63, "sugar"), new Product(13, "sugar"),
+            new Product(9, "orange"), new Product(13, "bread")),
+            Arrays.asList(new Product(23, "potatoes"),
+            new Product(63, "sugar"), new Product(13, "sugar"),
+            new Product(9, "orange"), new Product(13, "bread"))
+     );
+
+
 }

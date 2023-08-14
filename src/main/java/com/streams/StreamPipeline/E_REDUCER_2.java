@@ -5,34 +5,25 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class E_REDUCER_2 {
 	static int counter = 0;
 	static int counter1 = 10;
 	public static void main(String[] args) {
 		
-		List<String> list = Arrays.asList("ram","laxman","shyam","anand","abc","def","htl");
+		List<String> list = Arrays.asList("ram","laxman","shyam","jay","apple", "banana", "cherry", "date");
 		long start = System.currentTimeMillis();
-//		List<String> retList = 
 				list.parallelStream().reduce(new ArrayList<String>(),(a,b)->{
-					try {
-						Thread.sleep(200);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
 					counter++;
 					System.out.println("a: "+a+"  b: "+b+"  count: "+counter+" thread: "+Thread.currentThread().getName());
 			a.add(b);
 			return a;
 		},(c,d)-> {
-			try {
-				Thread.sleep(200);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			counter1++;
 			System.out.println("c: "+c+"d: "+d+"  count: "+counter1+" thread: "+Thread.currentThread().getName());
+			// c.addAll(d);
 			return c;
 		}).stream().forEach((x)-> System.out.println(x));
 				long end = System.currentTimeMillis();
@@ -52,7 +43,7 @@ public class E_REDUCER_2 {
             }
         );
 
-        System.out.println("Word List: " + wordList);
+        log.info("word list"+wordList);
 		
 	}
 }
